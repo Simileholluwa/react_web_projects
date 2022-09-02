@@ -67,14 +67,47 @@ header .header__container .me {
   margin-top: 4rem;
   border-radius: 12rem 12rem 0 0;
   overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .header__container .me img {
   padding-bottom: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (max-width: 1024px) {
   header {
-    height: 68vh;
+    padding-top: 3rem;
+    height: 100vh;
+  }
+  header .header__container .cta {
+    margin-top: 1.5rem;
+  }
+  header .header__container .header__socials {
+    margin-top: 1.5rem;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: transparent;
+    padding: 0;
+  }
+  header .header__container .header__socials::after {
+    content: "";
+    width: 3rem;
+    height: 2px;
+    background: var(--color-primary);
+  }
+  header .header__container .header__socials a {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  header .header__container .me {
+    margin-top: 2.5rem;
+  }
+  header .header__container .me .img {
+    margin-bottom: 10rem;
   }
 }
 @media screen and (max-width: 600px) {
